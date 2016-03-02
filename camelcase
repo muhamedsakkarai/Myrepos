@@ -1,0 +1,41 @@
+ #include <stdio.h>  
+ #include <stdlib.h>  
+ int main()  
+ {  
+ char str[50];  
+ int i, j, len;  
+ printf("\nEnter a string: ");  
+ gets(str);  
+ printf("\nEntered string: ");  
+ puts(str);  
+ len=strlen(str);  
+ i=0;  
+ while(i!=len)                         
+ {  
+ if((i==0))   
+ {  
+ if(str[i]>90)                         
+ str[i] = str[i]%65+33;  
+ i++;  
+ }  
+ else if((str[i]!=' ') && (str[i]<=90)) 
+ {  
+ str[i]=str[i]%97+32;  
+ i++;  
+ }  
+ else if(str[i]==' ')                
+ {  
+ i++;  
+ if(str[i]>96)  
+ str[i]=str[i]%65+33;  
+ i++;  
+ }  
+ else  
+ i++;                                
+ }  
+ str[i]='\0';  
+ printf("\nOutput: ");  
+ puts(str);  
+ printf("\n\n");  
+ return 1;  
+ }  
