@@ -1,0 +1,11 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+int i;
+char n[];
+gets(n);
+i=atoi(n);
+printf("after conversion from string to int : %d",i);
+return 0;
+}
